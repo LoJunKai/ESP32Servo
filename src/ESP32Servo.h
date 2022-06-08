@@ -86,10 +86,10 @@
 
 #define ESP32_Servo_VERSION           1     // software version of this library
 
-#define MIN_PULSE_WIDTH       500     // the shortest pulse sent to a servo  
-#define MAX_PULSE_WIDTH      2500     // the longest pulse sent to a servo 
-#define DEFAULT_PULSE_WIDTH  1500     // default pulse width when servo is attached
-#define DEFAULT_PULSE_WIDTH_TICKS 4825
+const int MIN_PULSE_WIDTH = 500;     // the shortest pulse sent to a servo  
+const int MAX_PULSE_WIDTH = 2500;     // the longest pulse sent to a servo 
+const int DEFAULT_PULSE_WIDTH = 1500;     // default pulse width when servo is attached
+const int DEFAULT_PULSE_WIDTH_TICKS = 4825;
 //#define REFRESH_CPS            50
 #define REFRESH_USEC         20000
 
