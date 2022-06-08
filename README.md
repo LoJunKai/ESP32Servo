@@ -1,3 +1,9 @@
+# Fix implemented over the original
+
+## Disable the usage of `#define`
+
+This causes a clash with the `ESP32Servo360` library as they both define the variables `MIN_PULSE_WIDTH` and `MAX_PULSE_WIDTH`. Since this library defines it as a macro, the compiler is unable to properly scope the variable, causing a re-definition error (`error: expected unqualified-id before numeric constant`) when compiling `ESP32Servo360.h` as `ESP32Servo360.h` redefines the same variable.
+
 # Servo Library for ESP32
 
 This library attempts to faithfully replicate the semantics of the
